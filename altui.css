@@ -1,0 +1,99 @@
+/*
+*  make all three measurement devices use the same value font size
+*/
+span.altui-temperature, span.altui-humidity, span.altui-light {
+    font-size: 16px;
+}
+
+/*
+*  add 2px left margin to the default style
+*/
+.altui-vswitch-text, .altui-veraalerts-text, .altui-autovera-text, .altui-upnpproxy-text, .altui-sysmon-text {
+    xmargin-left: 0px;
+}
+
+.altui-veraalerts-text {
+    xpadding-left: 0px;
+}
+
+/*
+*  make the typical on-off or arm switch green
+*/
+span.onoffswitch-inner::before {
+    background-color: #006C44;
+}
+span.onoffswitch-label {
+    xborder-color: #990099;
+}
+span.onoffswitch-switch {
+    xborder-color: #009999;
+}
+
+
+/*
+*  specify battery level colors for different levels
+*  these are the default level colors green, cyan, brown
+*/
+div.altui-battery .progress-bar {
+    xcolor: white;
+}
+div.altui-battery .progress-bar-success {
+    xbackground-color: #5cb85c;
+}
+div.altui-battery .progress-bar-info {
+    xbackground-color: #5bc0de;
+}
+div.altui-battery .progress-bar-danger {
+    xbackground-color: #d9534f;
+}
+
+/*
+** plts
+*/
+
+/* this works but it is coded elsewhere also
+div.altui-plts-btn-div .altui-plts-btn-on {
+    color: white; background-color: #006C44; border-color: #CCCCCC;
+}
+*/
+
+/*
+** multiswitch
+** converting the individual buttons to button rows
+**/
+
+div.altui-multiswitch-container {
+    position:absolute; left:75px; right:17px; height: 48px; padding-top: 4px;
+}
+
+div.altui-multiswitch-container .row {
+    padding-top:0px; padding-bottom:0px; margin-left:0px; margin-right:0px;
+}
+
+div.altui-multiswitch-container .col-xs-3 {
+    padding-left: 0px; padding-right: 0px;
+    margin-left: -1px;
+}
+
+div.altui-multiswitch-container .btn-xs {
+    font-size: 11px; line-height: 1.5;
+}
+
+div.altui-multiswitch-container .btn-info {
+    color: white; background-color: #006C44; border-color: #CCCCCC;
+}
+
+div.altui-multiswitch-container .col-xs-3:first-child:not(:last-child) .btn-xs {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+div.altui-multiswitch-container .col-xs-3:not(:first-child):not(:last-child) .btn-xs {
+    border-radius: 0;
+}
+
+div.altui-multiswitch-container .col-xs-3:last-child:not(:first-child) .btn-xs {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
